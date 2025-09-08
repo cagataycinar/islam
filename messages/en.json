@@ -1,0 +1,126 @@
+{
+  "common": {
+    "search": "Search",
+    "readMore": "Read More",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "update": "Update",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "navigation": {
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "articles": "Articles",
+    "blog": "Blog",
+    "library": "Library",
+    "sirah": "Prophet's Life",
+    "calendar": "Islamic Calendar",
+    "prayerTimes": "Prayer Times",
+    "askAI": "Ask AI",
+    "admin": "Admin"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Islam",
+      "subtitle": "A comprehensive guide to Islamic knowledge and practice",
+      "searchPlaceholder": "Search Quran, Hadith, Articles..."
+    },
+    "verseOfDay": {
+      "title": "Verse of the Day",
+      "readMore": "Read Full Surah"
+    },
+    "hadithOfDay": {
+      "title": "Hadith of the Day"
+    },
+    "sections": {
+      "articles": "Latest Articles",
+      "blog": "Blog Posts",
+      "library": "PDF Library",
+      "hadith": "Hadith Collection",
+      "sirah": "Prophet's Life",
+      "importantDays": "Important Islamic Days",
+      "prayerTimes": "Prayer Times"
+    }
+  },
+  "quran": {
+    "title": "Quran",
+    "surah": "Surah",
+    "ayah": "Ayah",
+    "translation": "Translation",
+    "arabic": "Arabic"
+  },
+  "hadith": {
+    "title": "Hadith",
+    "source": "Source",
+    "narrator": "Narrator",
+    "category": "Category",
+    "filterBy": "Filter by Category"
+  },
+  "articles": {
+    "title": "Articles",
+    "readTime": "min read",
+    "publishedOn": "Published on",
+    "by": "by",
+    "tags": "Tags"
+  },
+  "blog": {
+    "title": "Blog",
+    "readTime": "min read",
+    "publishedOn": "Published on",
+    "by": "by",
+    "tags": "Tags"
+  },
+  "library": {
+    "title": "PDF Library",
+    "download": "Download",
+    "fileSize": "File Size",
+    "category": "Category",
+    "downloads": "Downloads"
+  },
+  "sirah": {
+    "title": "Prophet's Life",
+    "sections": "Sections",
+    "readMore": "Read More"
+  },
+  "calendar": {
+    "title": "Islamic Calendar",
+    "today": "Today",
+    "importantDays": "Important Days",
+    "hijriDate": "Hijri Date"
+  },
+  "prayerTimes": {
+    "title": "Prayer Times",
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "location": "Location",
+    "method": "Calculation Method"
+  },
+  "askAI": {
+    "title": "Ask AI",
+    "placeholder": "Ask any question about Islam...",
+    "submit": "Submit Question",
+    "recentQuestions": "Recent Questions"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "content": "Content Management",
+    "users": "Users",
+    "settings": "Settings",
+    "notifications": "Notifications"
+  }
+}

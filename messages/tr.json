@@ -1,0 +1,126 @@
+{
+  "common": {
+    "search": "Ara",
+    "readMore": "Devamını Oku",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "contact": "İletişim"
+  },
+  "navigation": {
+    "quran": "Kur'an",
+    "hadith": "Hadis",
+    "articles": "Makaleler",
+    "blog": "Blog",
+    "library": "Kütüphane",
+    "sirah": "Peygamber'in Hayatı",
+    "calendar": "İslami Takvim",
+    "prayerTimes": "Namaz Vakitleri",
+    "askAI": "AI'ya Sor",
+    "admin": "Yönetici"
+  },
+  "home": {
+    "hero": {
+      "title": "İslam'ı Keşfedin",
+      "subtitle": "İslami bilgi ve uygulama için kapsamlı bir rehber",
+      "searchPlaceholder": "Kur'an, Hadis, Makale ara..."
+    },
+    "verseOfDay": {
+      "title": "Günün Ayeti",
+      "readMore": "Tam Sureyi Oku"
+    },
+    "hadithOfDay": {
+      "title": "Günün Hadisi"
+    },
+    "sections": {
+      "articles": "Son Makaleler",
+      "blog": "Blog Yazıları",
+      "library": "PDF Kütüphanesi",
+      "hadith": "Hadis Koleksiyonu",
+      "sirah": "Peygamber'in Hayatı",
+      "importantDays": "Önemli İslami Günler",
+      "prayerTimes": "Namaz Vakitleri"
+    }
+  },
+  "quran": {
+    "title": "Kur'an",
+    "surah": "Sure",
+    "ayah": "Ayet",
+    "translation": "Çeviri",
+    "arabic": "Arapça"
+  },
+  "hadith": {
+    "title": "Hadis",
+    "source": "Kaynak",
+    "narrator": "Ravi",
+    "category": "Kategori",
+    "filterBy": "Kategoriye Göre Filtrele"
+  },
+  "articles": {
+    "title": "Makaleler",
+    "readTime": "dakika okuma",
+    "publishedOn": "Yayınlanma tarihi",
+    "by": "yazar",
+    "tags": "Etiketler"
+  },
+  "blog": {
+    "title": "Blog",
+    "readTime": "dakika okuma",
+    "publishedOn": "Yayınlanma tarihi",
+    "by": "yazar",
+    "tags": "Etiketler"
+  },
+  "library": {
+    "title": "PDF Kütüphanesi",
+    "download": "İndir",
+    "fileSize": "Dosya Boyutu",
+    "category": "Kategori",
+    "downloads": "İndirme Sayısı"
+  },
+  "sirah": {
+    "title": "Peygamber'in Hayatı",
+    "sections": "Bölümler",
+    "readMore": "Devamını Oku"
+  },
+  "calendar": {
+    "title": "İslami Takvim",
+    "today": "Bugün",
+    "importantDays": "Önemli Günler",
+    "hijriDate": "Hicri Tarih"
+  },
+  "prayerTimes": {
+    "title": "Namaz Vakitleri",
+    "fajr": "Sabah",
+    "dhuhr": "Öğle",
+    "asr": "İkindi",
+    "maghrib": "Akşam",
+    "isha": "Yatsı",
+    "location": "Konum",
+    "method": "Hesaplama Yöntemi"
+  },
+  "askAI": {
+    "title": "AI'ya Sor",
+    "placeholder": "İslam hakkında herhangi bir soru sorun...",
+    "submit": "Soruyu Gönder",
+    "recentQuestions": "Son Sorular"
+  },
+  "admin": {
+    "title": "Yönetici Paneli",
+    "dashboard": "Kontrol Paneli",
+    "content": "İçerik Yönetimi",
+    "users": "Kullanıcılar",
+    "settings": "Ayarlar",
+    "notifications": "Bildirimler"
+  }
+}
