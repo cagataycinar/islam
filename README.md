@@ -313,30 +313,63 @@ Notification {
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### GitHub Repository
+✅ **Repository Created:** [https://github.com/cagataycinar/islam.git](https://github.com/cagataycinar/islam.git)
 
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
+### MongoDB Atlas Setup
 
-2. **Connect to Vercel**
+1. **Create MongoDB Atlas Account**
+   - Go to [MongoDB Atlas](https://cloud.mongodb.com)
+   - Sign up with email or Google/GitHub
+
+2. **Create Cluster**
+   - Choose "Shared" (free tier)
+   - Select cloud provider (AWS/Google/Azure)
+   - Choose region closest to you
+   - Name: `islam-cluster`
+   - Click "Create Cluster"
+
+3. **Database Access**
+   - Go to "Database Access" in left menu
+   - Click "Add New Database User"
+   - Username: `islam-user`
+   - Password: Create strong password (save it!)
+   - Privileges: "Read and write to any database"
+   - Click "Add User"
+
+4. **Network Access**
+   - Go to "Network Access" in left menu
+   - Click "Add IP Address"
+   - Choose "Allow Access from Anywhere" (0.0.0.0/0)
+   - Click "Confirm"
+
+5. **Get Connection String**
+   - Go to "Database" in left menu
+   - Click "Connect" → "Connect your application"
+   - Driver: Node.js, Version: 4.1 or later
+   - Copy the connection string
+
+### Vercel Deployment
+
+1. **Connect to Vercel**
    - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Add environment variables in Vercel dashboard
+   - Import GitHub repository: `https://github.com/cagataycinar/islam.git`
+   - Add environment variables (see below)
    - Deploy!
 
 ### Environment Variables for Production
 
-Set these in your deployment platform:
+Set these in Vercel dashboard:
 
-- `MONGODB_URI` - Your MongoDB connection string
-- `JWT_SECRET` - A strong, random secret key (32+ characters)
-- `APP_URL` - Your production URL
-- `EXPO_PUSH_URL` - Expo push notification URL
-- `DEFAULT_LOCALE` - Default language (en or tr)
+```env
+MONGODB_URI=mongodb+srv://islam-user:<password>@islam-cluster.xxxxx.mongodb.net/islam?retryWrites=true&w=majority
+JWT_SECRET=your-super-secret-jwt-key-here-change-this-in-production
+APP_URL=https://your-domain.vercel.app
+EXPO_PUSH_URL=https://exp.host/--/api/v2/push/send
+DEFAULT_LOCALE=en
+```
+
+**Important:** Replace `<password>` with your actual MongoDB password and `xxxxx` with your cluster identifier.
 
 ## 📋 Available Scripts
 
