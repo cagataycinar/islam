@@ -91,6 +91,3 @@ export default async function AdminDashboard({ params }: AdminDashboardProps) {
   );
 }
 
-export { default } from '../../page';
-
-
