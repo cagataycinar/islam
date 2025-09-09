@@ -25,7 +25,7 @@ export default function AdminSidebar({ locale }: AdminSidebarProps) {
     { name: t.admin.articles, href: `/${locale}/admin/articles`, icon: '📝' },
     { name: t.admin.blogs, href: `/${locale}/admin/blogs`, icon: '✍️' },
     { name: t.admin.pdfs, href: `/${locale}/admin/pdfs`, icon: '📄' },
-    { name: t.admin.hadiths, href: `/${locale}/admin/hadiths`, icon: '💬' },
+    { name: t.admin.hadiths, href: `/${locale}/admin/hadith`, icon: '💬' },
     { name: t.admin.sirah, href: `/${locale}/admin/sirah`, icon: '👤' },
     { name: t.admin.calendar, href: `/${locale}/admin/calendar`, icon: '📅' },
     { name: t.admin.dailyContent, href: `/${locale}/admin/daily-content`, icon: '⭐' },
