@@ -17,10 +17,7 @@ export default function AdminSidebar({ locale }: AdminSidebarProps) {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
       window.location.href = `/${locale}`;
-    } catch {
-      // eslint-disable-next-line no-console
-      console.error('Logout failed');
-    }
+    } catch { /* noop */ }
   }, [locale]);
 
   const navigation = [

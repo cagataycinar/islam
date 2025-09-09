@@ -153,7 +153,7 @@ export default async function HadithPage({ params }: HadithPageProps) {
                 
                 <div className="flex-1 min-w-0">
                   <blockquote className="text-lg text-gray-900 mb-4 leading-relaxed">
-                    "{hadith.text[locale as 'en' | 'tr']}"
+                    &ldquo;{hadith.text[locale as 'en' | 'tr']}&rdquo;
                   </blockquote>
                   
                   <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">

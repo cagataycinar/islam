@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getTranslations } from '@/lib/translations';
-import { getCurrentUser } from '@/lib/cookies';
 
 interface AdminLoginProps {
   params: Promise<{ locale: string }>;

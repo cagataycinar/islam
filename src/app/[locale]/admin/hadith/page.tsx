@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+type HadithListItem = {
+  _id: string;
+  text?: { en?: string; tr?: string };
+};
+
 async function fetchHadiths(searchParams: { q?: string; page?: string }) {
   try {
     const query = new URLSearchParams();
@@ -42,7 +47,7 @@ export default async function AdminHadithPage({ searchParams }: { searchParams: 
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {items.map((a: any) => (
+            {items.map((a: HadithListItem) => (
               <tr key={a._id}>
                 <td className="px-4 py-3 max-w-lg truncate">{a.text?.en}</td>
                 <td className="px-4 py-3 max-w-lg truncate">{a.text?.tr}</td>

@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+type BlogListItem = {
+  _id: string;
+  title?: { en?: string; tr?: string };
+};
+
 async function fetchBlogs(searchParams: { q?: string; page?: string }) {
   try {
     const query = new URLSearchParams();
@@ -42,7 +47,7 @@ export default async function AdminBlogsPage({ searchParams }: { searchParams: P
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {items.map((a: any) => (
+            {items.map((a: BlogListItem) => (
               <tr key={a._id}>
                 <td className="px-4 py-3">{a.title?.en}</td>
                 <td className="px-4 py-3">{a.title?.tr}</td>
