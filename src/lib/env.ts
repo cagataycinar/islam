@@ -7,6 +7,8 @@ const envSchema = z.object({
   EXPO_PUSH_URL: z.string().url('EXPO_PUSH_URL must be a valid URL').default('https://exp.host/--/api/v2/push/send'),
   DEFAULT_LOCALE: z.enum(['en', 'tr']).default('en'),
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  ADMIN_EMAIL: z.string().email().default('admin@example.com'),
+  ADMIN_PASSWORD: z.string().min(6).default('Admin12345!'),
 });
 
 export const env = envSchema.parse(process.env);

@@ -118,9 +118,25 @@
   "admin": {
     "title": "Yönetici Paneli",
     "dashboard": "Kontrol Paneli",
-    "content": "İçerik Yönetimi",
+    "welcomeMessage": "Yönetici paneline hoş geldiniz. İçeriklerinizi ve ayarlarınızı buradan yönetebilirsiniz.",
+    "articles": "Makaleler",
+    "blogs": "Bloglar",
+    "pdfs": "PDF'ler",
+    "hadiths": "Hadisler",
+    "sirah": "Peygamber'in Hayatı",
+    "calendar": "Takvim",
+    "dailyContent": "Günlük İçerik",
     "users": "Kullanıcılar",
     "settings": "Ayarlar",
-    "notifications": "Bildirimler"
+    "notifications": "Bildirimler",
+    "quickActions": "Hızlı İşlemler",
+    "createArticle": "Makale Oluştur",
+    "createArticleDesc": "İslami konular hakkında yeni makale yazın",
+    "createBlog": "Blog Yazısı Oluştur",
+    "createBlogDesc": "Düşüncelerinizi ve deneyimlerinizi paylaşın",
+    "manageHadiths": "Hadisleri Yönet",
+    "manageHadithsDesc": "Hadis koleksiyonlarını ekleyin ve düzenleyin",
+    "dailyContentDesc": "Günlük ayet ve hadis belirleyin",
+    "backToSite": "Siteye Dön"
   }
 }

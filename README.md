@@ -104,33 +104,66 @@ messages/                  # Translation files
 ### Installation
 
 1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd islam
-   ```
+```bash
+git clone <repository-url>
+cd islam
+```
 
 2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. **Set up environment variables**
-   Create a `.env.local` file in the root directory:
-   ```env
-   MONGODB_URI=mongodb://localhost:27017/islam
-   JWT_SECRET=your-super-secret-jwt-key-here-change-this-in-production
-   APP_URL=http://localhost:3000
-   EXPO_PUSH_URL=https://exp.host/--/api/v2/push/send
-   DEFAULT_LOCALE=en
-   ```
+Create a `.env.local` file in the root directory:
+```env
+MONGODB_URI=mongodb://localhost:27017/islam
+# At least 32 chars
+JWT_SECRET=your-super-secret-jwt-key-here-change-this-in-production
+APP_URL=http://localhost:3000
+EXPO_PUSH_URL=https://exp.host/--/api/v2/push/send
+DEFAULT_LOCALE=en
+```
+Tip: You can start from `env.example` by copying it:
+```bash
+cp env.example .env.local
+```
 
 4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
 5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+Navigate to [http://localhost:3000](http://localhost:3000)
+- If port 3000 is busy, Next.js will auto-switch (e.g. 3005). Check the terminal output.
+
+## 🎨 Tailwind CSS v4 Setup
+
+Tailwind v4 is configured via PostCSS. Key files:
+
+```mjs
+// postcss.config.mjs
+const config = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+};
+export default config;
+```
+
+```css
+/* src/app/globals.css */
+@import "tailwindcss";
+
+:root { /* your CSS variables */ }
+```
+
+Troubleshooting styles:
+- Hard refresh (Ctrl/Cmd+Shift+R) to bypass cache
+- Ensure `@tailwindcss/postcss` is installed and present in `postcss.config.mjs`
+- Ensure `globals.css` uses `@import "tailwindcss";` (v4)
 
 ## 📊 Database Models
 
@@ -279,6 +312,9 @@ Notification {
 - `POST /api/auth/logout` - User logout
 - `GET /api/auth/me` - Get current user
 
+Quick test endpoints:
+- `GET /api/test-db` - Verifies MongoDB connectivity
+
 ### Planned Endpoints
 - `GET /api/prayer/today` - Prayer times with geolocation
 - `GET /api/ip-info` - IP-based location fallback
@@ -293,6 +329,14 @@ Notification {
 - **Translation files:** JSON-based in `messages/` directory
 - **Custom hooks:** `useTranslations()` and `useLocale()`
 - **Admin management:** Language collection for future locales
+
+Next.js 15 note: in App Router, `params` is a Promise in server components/layouts.
+Example:
+```ts
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+}
+```
 
 ## 🔒 Security Features
 
@@ -379,7 +423,18 @@ DEFAULT_LOCALE=en
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Fix ESLint errors
 - `npm run format` - Format code with Prettier
-- `npm run type-check` - Run TypeScript type checking
+- `npm run type-check` - Build with full type-check (`next build --no-lint`)
+
+## 🔐 Admin Access (Dev)
+
+- Register a user via `POST /api/auth/register` or UI, then mark as admin in DB:
+```js
+// mongosh
+use islam
+db.users.updateOne({ email: "you@example.com" }, { $addToSet: { roles: "admin" } })
+```
+- Admin routes: `/{locale}/admin` and login at `/{locale}/admin/login`
+- Middleware auto-redirects to a default locale if missing (e.g. `/en`)
 
 ## 🗺️ Roadmap
 
@@ -428,6 +483,7 @@ For support, email support@islam-platform.com or create an issue in the GitHub r
 - **Auth not persisting:** Confirm cookies not blocked; check same-site settings
 - **Build errors:** Ensure all environment variables are set
 - **TypeScript errors:** Run `npm run type-check` to identify issues
+- **Plain HTML/no styles:** See Tailwind v4 Setup above; reload hard; verify PostCSS plugin
 
 ---
 

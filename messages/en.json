@@ -118,9 +118,25 @@
   "admin": {
     "title": "Admin Panel",
     "dashboard": "Dashboard",
-    "content": "Content Management",
+    "welcomeMessage": "Welcome to the admin panel. Manage your content and settings here.",
+    "articles": "Articles",
+    "blogs": "Blogs",
+    "pdfs": "PDFs",
+    "hadiths": "Hadiths",
+    "sirah": "Prophet's Life",
+    "calendar": "Calendar",
+    "dailyContent": "Daily Content",
     "users": "Users",
     "settings": "Settings",
-    "notifications": "Notifications"
+    "notifications": "Notifications",
+    "quickActions": "Quick Actions",
+    "createArticle": "Create Article",
+    "createArticleDesc": "Write a new article about Islamic topics",
+    "createBlog": "Create Blog Post",
+    "createBlogDesc": "Share your thoughts and experiences",
+    "manageHadiths": "Manage Hadiths",
+    "manageHadithsDesc": "Add and organize hadith collections",
+    "dailyContentDesc": "Set daily verse and hadith",
+    "backToSite": "Back to Site"
   }
 }
